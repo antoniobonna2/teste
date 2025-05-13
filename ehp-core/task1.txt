@@ -1,0 +1,34 @@
+Projetos
+Echo Harbor Press
+
+DEHP-91
+
+DEHP-229
+
+
+Setup Local Development Environment components (Docker, databases, mocks)
+
+Adicionar
+
+Apps
+Descrição
+
+Set up the local development environment using Docker and Docker Compose to provide containerized instances of essential backend dependencies. The architecture document specifies that the local environment should include local databases (PostgreSQL, potentially MongoDB), Elasticsearch, Redis for caching, potentially mock AI services, and a local message queue.
+
+This task involves creating a docker-compose.yml file that defines and configures these services. Configure each service with appropriate Docker images, port mappings, persistent volumes (for data stores), and environment variables for configuration (managed via .env files). Ensure these containerized services can communicate with each other within the Docker network. The goal is to provide developers with a consistent, isolated, and easily manageable local environment that mirrors the necessary backend dependencies for development and testing.
+
+Acceptance Criteria
+
+A docker-compose.yml file defining the required local services (PostgreSQL, Elasticsearch, Redis, etc.) is created.
+
+The configuration uses environment variables (e.g., from .env files) for managing settings like ports and credentials.
+
+Running docker-compose up successfully starts all defined services in containers.
+
+The containerized services are accessible (e.g., database connections can be made, Redis/Elasticsearch respond).
+
+Volumes are configured for data persistence for stateful services like databases.
+
+Basic mock services for key external dependencies (like AI services) are included or defined within the compose setup.
+
+The setup provides a functional and consistent local development environment as described in the architecture document.
